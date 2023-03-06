@@ -9,3 +9,5 @@ add_subdirectory(src/)
 add_executable(out main.cpp)
 
 target_link_libraries(out PRIVATE llist_plus_plus)
+
+target_include_directories(out PRIVATE ${CMAKE_SOURCE_DIR}/include)
