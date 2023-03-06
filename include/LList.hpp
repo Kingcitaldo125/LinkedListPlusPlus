@@ -1,5 +1,6 @@
 #pragma once
 
+namespace llist_plus_plus{
 struct Node
 {
     Node(int d) : data(d) {}
@@ -25,3 +26,4 @@ class List
     Node* head;
     Node* tail;
 };
+}
