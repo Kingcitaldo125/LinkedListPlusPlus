@@ -6,3 +6,9 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}")
 add_library(llist_plus_plus SHARED LList.cpp)
 
 target_include_directories(llist_plus_plus PRIVATE ${CMAKE_SOURCE_DIR}/include)
+
+add_executable(out main.cpp)
+
+target_link_libraries(out PRIVATE llist_plus_plus)
+
+target_include_directories(out PRIVATE ${CMAKE_SOURCE_DIR}/include)
