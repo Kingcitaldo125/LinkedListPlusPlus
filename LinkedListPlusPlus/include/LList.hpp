@@ -16,6 +16,7 @@ class List
     virtual ~List();
 
     void add_node(int data);
+    void remove(int data);
     void traverse();
     void reverse();
 
