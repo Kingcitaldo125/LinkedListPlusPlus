@@ -29,7 +29,7 @@ void List::add_node(int data)
     head = nnode;
 }
 
-void List::remove(int val)
+void List::remove(int data)
 {
     if(head == nullptr)
         return;
@@ -40,7 +40,7 @@ void List::remove(int val)
 
     while(h)
     {
-        if (h->data == val)
+        if (h->data == data)
         {
             const auto hnxt = h->next;
 
@@ -58,7 +58,7 @@ void List::remove(int val)
         h = h->next;
     }
 
-    std::cout << "Cannot find '" << val << "' in list.\n";
+    std::cout << "Cannot find '" << data << "' in list.\n";
 }
 
 void List::traverse()
