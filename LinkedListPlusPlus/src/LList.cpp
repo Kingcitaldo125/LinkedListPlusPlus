@@ -2,7 +2,8 @@
 
 #include "LList.hpp"
 
-namespace llist_plus_plus{
+namespace llist_plus_plus {
+
 List::~List()
 {
     auto x = head;
@@ -26,6 +27,38 @@ void List::add_node(int data)
         tail = nnode;
 
     head = nnode;
+}
+
+void List::remove(int val)
+{
+    if(head == nullptr)
+        return;
+
+    auto h = head;
+    auto prev = h;
+    prev = nullptr;
+
+    while(h)
+    {
+        if (h->data == val)
+        {
+            const auto hnxt = h->next;
+
+            if (prev == nullptr)
+            {
+                head = hnxt;
+                return;
+            }
+
+            prev->next = hnxt;
+            return;
+        }
+
+        prev = h;
+        h = h->next;
+    }
+
+    std::cout << "Cannot find '" << val << "' in list.\n";
 }
 
 void List::traverse()
